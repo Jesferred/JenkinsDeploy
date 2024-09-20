@@ -1,39 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
+</html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Welcome</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+            color: #ffffff;
+            background-color: #E0E0E0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            -moz-transition-property: text-shadow;
+            -moz-transition-duration: 4s;
+            -webkit-transition-property: text-shadow;
+            -webkit-transition-duration: 4s;
+            text-shadow: none;
         }
-        .center-text {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: auto;
+
+        body.blurry {
+            -moz-transition-property: text-shadow;
+            -moz-transition-duration: 4s;
+            -webkit-transition-property: text-shadow;
+            -webkit-transition-duration: 4s;
+            text-shadow: #fff 0px 0px 25px;
         }
-        .footer-text {
-            font-size: 16px;
-            text-align: center;
+
+        a {
+            color: #0188cc;
+        }
+
+        .textColumn,
+        .linksColumn {
+            padding: 2em;
+        }
+
+        .textColumn {
             position: absolute;
-            bottom: 20px;
+            top: 0px;
+            right: 50%;
+            bottom: 0px;
+            left: 0px;
+
+            text-align: right;
+            padding-top: 11em;
+            background-color: #1BA86D;
+            background-image: -moz-radial-gradient(left top, circle, #6AF9BD 0%, #00B386 60%);
+            background-image: -webkit-gradient(radial, 0 0, 1, 0 0, 500, from(#6AF9BD), to(#00B386));
+        }
+
+        .textColumn p {
+            width: 75%;
+            float: right;
+        }
+
+        .linksColumn {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 50%;
+
+            background-color: #E0E0E0;
+        }
+
+        h1 {
+            font-size: 500%;
+            font-weight: normal;
+            margin-bottom: 0em;
+        }
+
+        h2 {
+            font-size: 200%;
+            font-weight: normal;
+            margin-bottom: 0em;
+        }
+
+        ul {
+            padding-left: 1em;
+            margin: 0px;
+        }
+
+        li {
+            margin: 1em 0em;
         }
     </style>
 </head>
-<body>
-    <div class="center-text">
-        Created by Jesferred, using GitHub + Jenkins
+
+<body id="sample">
+    <div class="textColumn">
+        <h1>Hello</h1>
+        <p>This is my CI/CD pipeline build by Jenkins + ElasticBeanstalk</p>
+        <p>Version 1.5 All rights reserved.</p>
     </div>
-    <div class="footer-text">
-        kovalov.in Version 1.4 All rights reserved.
+
+    <div class="linksColumn">
+        <h2>What's Next?</h2>
+        <ul>
+            <li><a href="https://github.com/Jesferred">Check my GitHub</a></li>
+            <li><a href="https://github.com/Jesferred/JenkinsDeploy">Check this repository in GitHub</a></li>
+        </ul>
     </div>
 </body>
+
 </html>
